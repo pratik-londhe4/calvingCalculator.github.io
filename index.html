@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="form-head">
+            <h2>Calving Date Calculator</h2>
+        </div>
+        <div>
+            <form action="">
+                <label>Select Date </label><input id="dateInput" type="date">
+                <div class="click1">
+                    <button type="button" id="b1" onclick="selectCow()">Cow</button>
+                </div>
+                <div class="click2">
+                    <button type="button" id="b2" onclick="selectBuffalo()">Buffalo</button>
+                </div>
+            </form>
+            <div>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selected;
+        let date = "";
+
+        document.getElementById("dateInput").addEventListener("change", function () {
+            var input = this.value;
+            date = new Date(input);
+        });
+
+        function selectCow() {
+
+            document.getElementById("result").innerHTML = "for Cow : "+ date.addDays(210).toDateString();
+
+        }
+        function selectBuffalo() {
+            document.getElementById("result").innerHTML = "for Buffalo : "+ date.addDays(310).toDateString();
+
+        }
+
+
+        Date.prototype.addDays = function (days) {
+            var date = new Date(this.valueOf());
+            date.setDate(date.getDate() + days);
+            return date;
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
