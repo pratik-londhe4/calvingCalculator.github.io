@@ -22,3 +22,56 @@
     margin-top: -14%;
     margin-left: 30%;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .main{
+        border: 1px solid black;
+        height: 100vh;
+        width: 100vw;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    
+    .form-head{
+        border: 1px solid black;
+        padding: 5px;
+    }
+
+    .label1{
+        padding: 5px;
+        margin-left: 1%;
+    }
+
+    #dateInput{
+        height: 5vh;
+        padding: 5px;
+        margin-left: 10%;
+    }
+
+    .buttons{
+        padding: 5px;
+        height: 50%;
+    }
+    
+    
+    .click1{
+        margin-top: 10%;
+        margin-left: 1%;
+    
+    }
+    
+    
+    
+    .click2{
+        margin-top: 4%;
+        margin-left: 1%;
+    }
+
+    #result{
+        padding: 5px;
+        margin-left: 10%;
+        border: 1px solid;
+        margin-right: 30%;
+    }
+  }
